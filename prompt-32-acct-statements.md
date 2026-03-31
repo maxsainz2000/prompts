@@ -5,7 +5,33 @@ Generate the **Financial Statements** page — displaying the Income Statement (
 
 > **NON-NEGOTIABLE**: This page MUST include an Interpretation Panel providing insights, analytics, and visual graphs alongside the raw financial data.
 
----
+## §1.5. Reference-Driven Shell Consistency (REQUIRED)
+
+> **A canvas reference of the previously generated App Shell is attached to this generation request.**
+
+This page screen renders *inside* the VISTA App Shell. The shell has already been visually designed and approved. Your task is to **preserve it exactly** and only generate new UI for the content area.
+
+### Shell Preservation Rules — STRICT, NO EXCEPTIONS
+
+**DO NOT** redesign, reinterpret, re-render, or stylistically deviate from any shell component shown in the reference canvas.
+
+**MATCH EXACTLY** from the reference canvas:
+
+| Shell Component | What to Match |
+|----------------|---------------|
+| **Top Bar** | Exact height (~48px), `#2C3E2C` background, logo placement (left), module tab layout (center), user/role display (right), tab active-state style |
+| **Left Sidebar** | Exact width (~200px), `#2C3E2C` background, module name header, page item height (36px), left padding (12px), active item highlight color (`#4A6741`), inactive text color (`#E8EDE8`) |
+| **Status Bar** | Exact height (~32px), `#2C3E2C` background, sync indicator (left), last sync text (center), version text (right) |
+
+**ONLY generate new UI** for the **CONTENT AREA** — the `#FAFAF5` region to the right of the sidebar and above the status bar.
+
+**Active state updates allowed (and required):**
+- Set the module tab specified in §3 Navigation Context as active (highlighted).
+- Set the sidebar page specified in §3 Navigation Context as active (highlighted with `#4A6741` background, white text).
+- All other shell elements must be visually identical to the reference.
+
+### Why This Matters
+Shell inconsistency across screens breaks the illusion of a unified application. Every pixel of the shell that differs from the reference degrades the prototype quality. Treat the reference canvas as ground truth.
 
 ## §2. System Objective
 
